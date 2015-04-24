@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E956D8641AEA72B500A674BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E956D8631AEA72B500A674BD /* main.m */; };
+		E956D8671AEA72B500A674BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E956D8661AEA72B500A674BD /* AppDelegate.m */; };
+		E956D86A1AEA72B500A674BD /* tedRSS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E956D8681AEA72B500A674BD /* tedRSS.xcdatamodeld */; };
+		E956D86D1AEA72B500A674BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E956D86C1AEA72B500A674BD /* ViewController.m */; };
+		E956D8701AEA72B500A674BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E956D86E1AEA72B500A674BD /* Main.storyboard */; };
+		E956D8721AEA72B500A674BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E956D8711AEA72B500A674BD /* Images.xcassets */; };
+		E956D8751AEA72B500A674BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E956D8731AEA72B500A674BD /* LaunchScreen.xib */; };
+		E956D8811AEA72B600A674BD /* tedRSSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E956D8801AEA72B600A674BD /* tedRSSTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E956D87B1AEA72B600A674BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E956D8561AEA72B500A674BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E956D85D1AEA72B500A674BD;
+			remoteInfo = tedRSS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E956D85E1AEA72B500A674BD /* tedRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tedRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E956D8621AEA72B500A674BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E956D8631AEA72B500A674BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E956D8651AEA72B500A674BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E956D8661AEA72B500A674BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E956D8691AEA72B500A674BD /* tedRSS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tedRSS.xcdatamodel; sourceTree = "<group>"; };
+		E956D86B1AEA72B500A674BD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E956D86C1AEA72B500A674BD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E956D86F1AEA72B500A674BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E956D8711AEA72B500A674BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E956D8741AEA72B500A674BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E956D87A1AEA72B600A674BD /* tedRSSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tedRSSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E956D87F1AEA72B600A674BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E956D8801AEA72B600A674BD /* tedRSSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tedRSSTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E956D85B1AEA72B500A674BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E956D8771AEA72B600A674BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E956D8551AEA72B500A674BD = {
+			isa = PBXGroup;
+			children = (
+				E956D8601AEA72B500A674BD /* tedRSS */,
+				E956D87D1AEA72B600A674BD /* tedRSSTests */,
+				E956D85F1AEA72B500A674BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E956D85F1AEA72B500A674BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E956D85E1AEA72B500A674BD /* tedRSS.app */,
+				E956D87A1AEA72B600A674BD /* tedRSSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E956D8601AEA72B500A674BD /* tedRSS */ = {
+			isa = PBXGroup;
+			children = (
+				E956D8651AEA72B500A674BD /* AppDelegate.h */,
+				E956D8661AEA72B500A674BD /* AppDelegate.m */,
+				E956D86B1AEA72B500A674BD /* ViewController.h */,
+				E956D86C1AEA72B500A674BD /* ViewController.m */,
+				E956D86E1AEA72B500A674BD /* Main.storyboard */,
+				E956D8711AEA72B500A674BD /* Images.xcassets */,
+				E956D8731AEA72B500A674BD /* LaunchScreen.xib */,
+				E956D8681AEA72B500A674BD /* tedRSS.xcdatamodeld */,
+				E956D8611AEA72B500A674BD /* Supporting Files */,
+			);
+			path = tedRSS;
+			sourceTree = "<group>";
+		};
+		E956D8611AEA72B500A674BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E956D8621AEA72B500A674BD /* Info.plist */,
+				E956D8631AEA72B500A674BD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E956D87D1AEA72B600A674BD /* tedRSSTests */ = {
+			isa = PBXGroup;
+			children = (
+				E956D8801AEA72B600A674BD /* tedRSSTests.m */,
+				E956D87E1AEA72B600A674BD /* Supporting Files */,
+			);
+			path = tedRSSTests;
+			sourceTree = "<group>";
+		};
+		E956D87E1AEA72B600A674BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E956D87F1AEA72B600A674BD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E956D85D1AEA72B500A674BD /* tedRSS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E956D8841AEA72B600A674BD /* Build configuration list for PBXNativeTarget "tedRSS" */;
+			buildPhases = (
+				E956D85A1AEA72B500A674BD /* Sources */,
+				E956D85B1AEA72B500A674BD /* Frameworks */,
+				E956D85C1AEA72B500A674BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tedRSS;
+			productName = tedRSS;
+			productReference = E956D85E1AEA72B500A674BD /* tedRSS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E956D8791AEA72B600A674BD /* tedRSSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E956D8871AEA72B600A674BD /* Build configuration list for PBXNativeTarget "tedRSSTests" */;
+			buildPhases = (
+				E956D8761AEA72B600A674BD /* Sources */,
+				E956D8771AEA72B600A674BD /* Frameworks */,
+				E956D8781AEA72B600A674BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E956D87C1AEA72B600A674BD /* PBXTargetDependency */,
+			);
+			name = tedRSSTests;
+			productName = tedRSSTests;
+			productReference = E956D87A1AEA72B600A674BD /* tedRSSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E956D8561AEA72B500A674BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Pavel;
+				TargetAttributes = {
+					E956D85D1AEA72B500A674BD = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					E956D8791AEA72B600A674BD = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = E956D85D1AEA72B500A674BD;
+					};
+				};
+			};
+			buildConfigurationList = E956D8591AEA72B500A674BD /* Build configuration list for PBXProject "tedRSS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E956D8551AEA72B500A674BD;
+			productRefGroup = E956D85F1AEA72B500A674BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E956D85D1AEA72B500A674BD /* tedRSS */,
+				E956D8791AEA72B600A674BD /* tedRSSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E956D85C1AEA72B500A674BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E956D8701AEA72B500A674BD /* Main.storyboard in Resources */,
+				E956D8751AEA72B500A674BD /* LaunchScreen.xib in Resources */,
+				E956D8721AEA72B500A674BD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E956D8781AEA72B600A674BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E956D85A1AEA72B500A674BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E956D8671AEA72B500A674BD /* AppDelegate.m in Sources */,
+				E956D86A1AEA72B500A674BD /* tedRSS.xcdatamodeld in Sources */,
+				E956D86D1AEA72B500A674BD /* ViewController.m in Sources */,
+				E956D8641AEA72B500A674BD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E956D8761AEA72B600A674BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E956D8811AEA72B600A674BD /* tedRSSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E956D87C1AEA72B600A674BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E956D85D1AEA72B500A674BD /* tedRSS */;
+			targetProxy = E956D87B1AEA72B600A674BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E956D86E1AEA72B500A674BD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E956D86F1AEA72B500A674BD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E956D8731AEA72B500A674BD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E956D8741AEA72B500A674BD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E956D8821AEA72B600A674BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E956D8831AEA72B600A674BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E956D8851AEA72B600A674BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = tedRSS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E956D8861AEA72B600A674BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = tedRSS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E956D8881AEA72B600A674BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = tedRSSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tedRSS.app/tedRSS";
+			};
+			name = Debug;
+		};
+		E956D8891AEA72B600A674BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = tedRSSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tedRSS.app/tedRSS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E956D8591AEA72B500A674BD /* Build configuration list for PBXProject "tedRSS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E956D8821AEA72B600A674BD /* Debug */,
+				E956D8831AEA72B600A674BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E956D8841AEA72B600A674BD /* Build configuration list for PBXNativeTarget "tedRSS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E956D8851AEA72B600A674BD /* Debug */,
+				E956D8861AEA72B600A674BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E956D8871AEA72B600A674BD /* Build configuration list for PBXNativeTarget "tedRSSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E956D8881AEA72B600A674BD /* Debug */,
+				E956D8891AEA72B600A674BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E956D8681AEA72B500A674BD /* tedRSS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E956D8691AEA72B500A674BD /* tedRSS.xcdatamodel */,
+			);
+			currentVersion = E956D8691AEA72B500A674BD /* tedRSS.xcdatamodel */;
+			path = tedRSS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E956D8561AEA72B500A674BD /* Project object */;
+}
