@@ -125,6 +125,8 @@ static NSString *rssItemsCellIdentifier = @"rssItemsListCell2";
     if (rssItem.pubDate)
     {
         cell.pubDateLabel.text = [_dateFormatterForPubDate stringFromDate:rssItem.pubDate];
+    } else {
+        cell.pubDateLabel.text = @"";
     }
     
     //load thumbnails images
