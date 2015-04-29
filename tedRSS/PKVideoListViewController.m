@@ -14,6 +14,7 @@
 
 @interface PKVideoListViewController ()
 @property (nonatomic, strong) NSXMLParser *parser;
+@property (strong, nonatomic) NSDateFormatter *dateFormatterForPubDate;
 @property (nonatomic, strong) PKRSSItemObject *currentRSSItem;
 @property (nonatomic, strong) NSArray *rssItemsArray;
 @property (nonatomic, strong) NSOperationQueue *thumbDownloadQueue;
@@ -34,7 +35,8 @@
 }
 
 static NSString *placeholderImageName = @"tedPlaceholder.jpg";
-static NSString *rssURLString = @"http://www.ted.com/themes/rss/id/6";
+//static NSString *rssURLString = @"http://www.ted.com/themes/rss/id/6";
+static NSString *rssURLString = @"http://feeds2.feedburner.com/tedtalks_video/";
 static NSString *rssItemsCellIdentifier = @"rssItemsListCell2";
 
 #pragma mark - lifecycle
@@ -45,6 +47,8 @@ static NSString *rssItemsCellIdentifier = @"rssItemsListCell2";
     _rssItemsArray = [[NSArray alloc]init];
     _thumbDownloadQueue = [[NSOperationQueue alloc] init];
     _thumbDownloadQueue.maxConcurrentOperationCount = 1;
+    _dateFormatterForPubDate = [[NSDateFormatter alloc] init];
+    [_dateFormatterForPubDate setDateFormat:@"dd MMMM yyyy"];
     
     
     _rssTableView.hidden = YES;
@@ -115,7 +119,13 @@ static NSString *rssItemsCellIdentifier = @"rssItemsListCell2";
 {
     PKRSSListCell *cell = [tableView dequeueReusableCellWithIdentifier:rssItemsCellIdentifier];
     PKRSSItemObject *rssItem = [_rssItemsArray objectAtIndex:indexPath.row];
+    // set labels
     cell.titleLabel.text = rssItem.title;
+
+    if (rssItem.pubDate)
+    {
+        cell.pubDateLabel.text = [_dateFormatterForPubDate stringFromDate:rssItem.pubDate];
+    }
     
     //load thumbnails images
     if (rssItem.thumbImage)
@@ -184,6 +194,8 @@ static NSString *rssItemsCellIdentifier = @"rssItemsListCell2";
         if ([bitrate isEqualToString:@"320"])
         {
             _currentRSSItem.videoURLString320 = [attributeDict valueForKey:@"url"];
+        } else if (!bitrate) {
+            _currentRSSItem.videoURLString320 = [attributeDict valueForKey:@"url"];
         }
     } else if ([currentElement isEqualToString:@"media:thumbnail"]) {
         _currentRSSItem.thumbURLString = [attributeDict valueForKey:@"url"];
@@ -221,6 +233,7 @@ static NSString *rssItemsCellIdentifier = @"rssItemsListCell2";
         {
             _rssTableView.delegate = self;
             _rssTableView.dataSource = self;
+            //TODO: add lazy datasource update
             [_rssTableView reloadData];
         }
 
@@ -235,7 +248,7 @@ static NSString *rssItemsCellIdentifier = @"rssItemsListCell2";
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         if (status == AFNetworkReachabilityStatusNotReachable)
         {
-            UIAlertView *noConnectionAlertView = [[UIAlertView alloc] initWithTitle:@"No Connection" message:@"Internet connection seems to be offline, try again later" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *noConnectionAlertView = [[UIAlertView alloc] initWithTitle:@"No Connection" message:@"Internet connection appears to be offline, try again later" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [noConnectionAlertView show];
         } else if (status == AFNetworkReachabilityStatusReachableViaWiFi || status == AFNetworkReachabilityStatusReachableViaWWAN){
             _rssTableView.hidden = NO;

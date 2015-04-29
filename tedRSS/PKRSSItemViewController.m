@@ -21,7 +21,8 @@
 @implementation PKRSSItemViewController
 #define DETAILS_TEXT_OFFSET 8
 #define SPACE_BETWEEN_LABELS 8
-
+#define IPHONE_LANDSCAPE_TOPOFFSET 32
+#define IPHONE_PORTRAIT_TOPOFFSET 64
 
 #pragma mark - lifecycle
 
@@ -88,7 +89,6 @@
     
     _moviePlayerController.view.frame = self.videoPlayerView.bounds;
     
-    
     //set content size for description
     CGFloat contentHeight = [self calculateContentHeight];
     
@@ -107,6 +107,34 @@
 }
 
 #pragma mark - view methods
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    //handle iphone rotation to landscape - hide description, update player frame
+    if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone && (size.width > size.height))
+    {
+        //iphone lanscape
+        //TODO: how to get navbar height of next view
+        CGFloat navBarHeight = IPHONE_LANDSCAPE_TOPOFFSET;
+        _videoPlayerViewTopConstraint.constant = navBarHeight;
+        _videoPlayerViewHeightConstraint.constant = (self.view.frame.size.width - navBarHeight);
+        _titleWidthConstraint.constant = size.height - 2*DETAILS_TEXT_OFFSET;
+        _descriptionWidthConstraint.constant = size.height - 2*DETAILS_TEXT_OFFSET;
+        _titleHeightCOnstraint.constant = [self calculateHeightOfLabel:_titleLabel forWidth:size.height];
+        _descriptionHeightConstraint.constant = [self calculateHeightOfLabel:_descriptionLabel forWidth:size.height];
+        
+    } else {
+        //iphone portrait
+        CGFloat navBarHeight = IPHONE_PORTRAIT_TOPOFFSET;
+        _videoPlayerViewTopConstraint.constant = navBarHeight;
+        _videoPlayerViewHeightConstraint.constant = (self.view.frame.size.width - navBarHeight)/2;
+        _titleWidthConstraint.constant = size.width - 2*DETAILS_TEXT_OFFSET;
+        _descriptionWidthConstraint.constant = size.width - 2*DETAILS_TEXT_OFFSET;
+        _titleHeightCOnstraint.constant = [self calculateHeightOfLabel:_titleLabel forWidth:size.width];
+        _descriptionHeightConstraint.constant = [self calculateHeightOfLabel:_descriptionLabel forWidth:size.width];
+    }
+}
+
 /*! calculate height of input label
  */
 - (CGFloat) calculateHeightOfLabel:(UILabel *)inputLabel
@@ -117,6 +145,19 @@
                                                            NSFontAttributeName : inputLabel.font
                                                            }
                                                  context:nil];
+    return ceil(resultRect.size.height);
+}
+
+/*! calculate height of input label for inputWidth
+ */
+- (CGFloat) calculateHeightOfLabel:(UILabel *)inputLabel forWidth:(CGFloat)inputWidth
+{
+    CGRect resultRect =  [inputLabel.text boundingRectWithSize:CGSizeMake(inputWidth-2*DETAILS_TEXT_OFFSET, CGFLOAT_MAX)
+                                                       options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading)
+                                                    attributes:@{
+                                                                 NSFontAttributeName : inputLabel.font
+                                                                 }
+                                                       context:nil];
     return ceil(resultRect.size.height);
 }
 

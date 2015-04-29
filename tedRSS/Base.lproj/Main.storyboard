@@ -53,8 +53,17 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSD-3f-VIX">
-                                                    <rect key="frame" x="8" y="20" width="446" height="99"/>
+                                                    <rect key="frame" x="8" y="25" width="446" height="94"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnR-48-HVN">
+                                                    <rect key="frame" x="8" y="8" width="446" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="BP5-hI-7rn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -63,12 +72,16 @@
                                                 <constraint firstAttribute="bottom" secondItem="RSD-3f-VIX" secondAttribute="bottom" constant="20" id="1K0-6b-QXQ"/>
                                                 <constraint firstItem="gPl-kW-lcG" firstAttribute="leading" secondItem="RSD-3f-VIX" secondAttribute="trailing" constant="8" id="2ZM-OQ-roo"/>
                                                 <constraint firstItem="RSD-3f-VIX" firstAttribute="leading" secondItem="KMg-EB-Hli" secondAttribute="leading" constant="8" id="AHr-8l-q5X"/>
-                                                <constraint firstItem="RSD-3f-VIX" firstAttribute="top" secondItem="KMg-EB-Hli" secondAttribute="top" constant="20" id="DAX-0N-o0d"/>
+                                                <constraint firstItem="gPl-kW-lcG" firstAttribute="leading" secondItem="wnR-48-HVN" secondAttribute="trailing" constant="8" id="BTH-JM-pxz"/>
+                                                <constraint firstItem="RSD-3f-VIX" firstAttribute="top" secondItem="KMg-EB-Hli" secondAttribute="top" constant="25" id="DAX-0N-o0d"/>
+                                                <constraint firstItem="wnR-48-HVN" firstAttribute="top" secondItem="KMg-EB-Hli" secondAttribute="top" constant="8" id="DHa-aZ-VNG"/>
                                                 <constraint firstItem="gPl-kW-lcG" firstAttribute="top" secondItem="KMg-EB-Hli" secondAttribute="top" constant="10" id="Y9q-yW-KWN"/>
+                                                <constraint firstItem="wnR-48-HVN" firstAttribute="leading" secondItem="KMg-EB-Hli" secondAttribute="leading" constant="8" id="aPg-rZ-fXd"/>
                                                 <constraint firstAttribute="trailing" secondItem="gPl-kW-lcG" secondAttribute="trailing" constant="8" id="jnY-My-EFq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="pubDateLabel" destination="wnR-48-HVN" id="49h-Kl-cPw"/>
                                             <outlet property="thumbImageView" destination="gPl-kW-lcG" id="ob3-kO-pJR"/>
                                             <outlet property="titleLabel" destination="RSD-3f-VIX" id="qkV-aS-d0W"/>
                                         </connections>

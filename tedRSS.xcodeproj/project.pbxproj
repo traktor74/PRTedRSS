@@ -247,6 +247,7 @@
 				TargetAttributes = {
 					E956D85D1AEA72B500A674BD = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 5T8EMK6LX3;
 					};
 					E956D8791AEA72B600A674BD = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -493,9 +494,13 @@
 			baseConfigurationReference = AE889CB8486A7F94360AE4D8 /* Pods-tedRSS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tedRSS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -504,9 +509,13 @@
 			baseConfigurationReference = C3B2825D8BFCF768161BFD7A /* Pods-tedRSS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tedRSS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

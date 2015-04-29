@@ -46,4 +46,11 @@
     }
 }
 
+- (void) setDescriptionString:(NSString *)descriptionString
+{
+    //removing html img src tags
+    NSString *descriptionsStringWithoutHTMLTags = [descriptionString stringByReplacingOccurrencesOfString:@"<img[^>]*>" withString:@"" options:NSCaseInsensitiveSearch | NSRegularExpressionSearch range:NSMakeRange(0, [descriptionString length])];
+    _descriptionString = descriptionsStringWithoutHTMLTags;
+}
+
 @end
