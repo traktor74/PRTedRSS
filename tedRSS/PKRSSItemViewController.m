@@ -43,14 +43,6 @@
     //calcuate labels height
     _titleLabelCalculatedHeight =  [self calculateHeightOfLabel:_titleLabel];
     _descriptionLabelCalculatedHeight = [self calculateHeightOfLabel:_descriptionLabel];
-
-    //update video top constraint if statusBar is hidden
-    BOOL statusBarIsVisible = ![[UIApplication sharedApplication] isStatusBarHidden];
-    if (!statusBarIsVisible)
-    {
-        CGFloat navBarHeight = self.navigationController.navigationBar.frame.size.height;
-        _videoPlayerViewTopConstraint.constant = navBarHeight;
-    }
     
     //set video date to navBar title
     if (_currentRSSItemObject.pubDate)
@@ -65,8 +57,9 @@
 {
     [super viewDidAppear:animated];
     
+    CGFloat topOffset = [self.topLayoutGuide length];
+    
     //set constraints
-    CGFloat topOffset = _videoPlayerViewTopConstraint.constant;
     _videoPlayerViewHeightConstraint.constant = (self.view.frame.size.height - topOffset)/2;
     _titleWidthConstraint.constant = self.view.frame.size.width - 2*DETAILS_TEXT_OFFSET;
     _titleHeightCOnstraint.constant = _titleLabelCalculatedHeight;
@@ -89,6 +82,16 @@
     
     _moviePlayerController.view.frame = self.videoPlayerView.bounds;
     
+    CGFloat navBarHeight = [self.topLayoutGuide length];
+    if ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) && self.view.frame.size.width > self.view.frame.size.height)
+    {
+        //landscape
+        _videoPlayerViewHeightConstraint.constant = (self.view.frame.size.height - navBarHeight);
+    } else if ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)) {
+        //portrait
+        _videoPlayerViewHeightConstraint.constant = (self.view.frame.size.height - navBarHeight)/2;
+    }
+    
     //set content size for description
     CGFloat contentHeight = [self calculateContentHeight];
     
@@ -110,24 +113,40 @@
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
+    [coordinator animateAlongsideTransition:nil completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        CGFloat navBarHeight = [self.topLayoutGuide length];
+        if (self.view.frame.size.width > self.view.frame.size.height)
+        {
+            //landscape
+            if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad)
+            {
+                _videoPlayerViewHeightConstraint.constant = (self.view.frame.size.height - navBarHeight)/2;
+                [UIView animateWithDuration:0.5 animations:^{
+                    [self.view layoutIfNeeded];
+                }];
+            }
+            
+        } else {
+            //portrait
+            _videoPlayerViewHeightConstraint.constant = (self.view.frame.size.height - navBarHeight)/2;
+            [UIView animateWithDuration:0.5 animations:^{
+                [self.view layoutIfNeeded];
+            }];
+        }
+        
+        
+    }];
     //handle iphone rotation to landscape - hide description, update player frame
     if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone && (size.width > size.height))
     {
         //iphone lanscape
-        //TODO: how to get navbar height of next view
-        CGFloat navBarHeight = IPHONE_LANDSCAPE_TOPOFFSET;
-        _videoPlayerViewTopConstraint.constant = navBarHeight;
-        _videoPlayerViewHeightConstraint.constant = (self.view.frame.size.width - navBarHeight);
         _titleWidthConstraint.constant = size.height - 2*DETAILS_TEXT_OFFSET;
         _descriptionWidthConstraint.constant = size.height - 2*DETAILS_TEXT_OFFSET;
         _titleHeightCOnstraint.constant = [self calculateHeightOfLabel:_titleLabel forWidth:size.height];
         _descriptionHeightConstraint.constant = [self calculateHeightOfLabel:_descriptionLabel forWidth:size.height];
         
-    } else {
+    } else   if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone && (size.width < size.height)){
         //iphone portrait
-        CGFloat navBarHeight = IPHONE_PORTRAIT_TOPOFFSET;
-        _videoPlayerViewTopConstraint.constant = navBarHeight;
-        _videoPlayerViewHeightConstraint.constant = (self.view.frame.size.width - navBarHeight)/2;
         _titleWidthConstraint.constant = size.width - 2*DETAILS_TEXT_OFFSET;
         _descriptionWidthConstraint.constant = size.width - 2*DETAILS_TEXT_OFFSET;
         _titleHeightCOnstraint.constant = [self calculateHeightOfLabel:_titleLabel forWidth:size.width];

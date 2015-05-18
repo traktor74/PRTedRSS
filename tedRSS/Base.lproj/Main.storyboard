@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Dlb-mB-gj6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Dlb-mB-gj6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -160,7 +160,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nrN-0T-p8W" firstAttribute="top" secondItem="lgy-ca-C6O" secondAttribute="top" constant="64" id="Iff-xi-fr3"/>
+                            <constraint firstItem="nrN-0T-p8W" firstAttribute="top" secondItem="Z7L-w9-IOK" secondAttribute="bottom" id="2v5-Lx-LkZ"/>
                             <constraint firstItem="uql-al-bav" firstAttribute="top" secondItem="Q9Y-sP-2rS" secondAttribute="bottom" id="S9I-w9-NF8"/>
                             <constraint firstItem="Q9Y-sP-2rS" firstAttribute="leading" secondItem="lgy-ca-C6O" secondAttribute="leading" id="Vuq-bD-7qy"/>
                             <constraint firstItem="Q9Y-sP-2rS" firstAttribute="top" secondItem="nrN-0T-p8W" secondAttribute="bottom" id="h94-4W-Ybh"/>
@@ -179,7 +179,6 @@
                         <outlet property="titleWidthConstraint" destination="DRu-YN-dCI" id="Zu4-So-A9o"/>
                         <outlet property="videoPlayerView" destination="nrN-0T-p8W" id="J1m-kh-ULq"/>
                         <outlet property="videoPlayerViewHeightConstraint" destination="EWU-TY-Rw8" id="HNp-J2-qeW"/>
-                        <outlet property="videoPlayerViewTopConstraint" destination="Iff-xi-fr3" id="6lZ-9L-ejD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8B-z3-ktk" userLabel="First Responder" sceneMemberID="firstResponder"/>
